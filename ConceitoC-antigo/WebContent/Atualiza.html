@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Atualiza tarefas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="tudo">
+
+<div class="menu">
+<ul>
+    <li><a class="active" href="http://localhost:8080/ProjUm/ListaTarefa">Minhas Tarefas</a></li>
+    <li><a href="http://localhost:8080/ProjUm/CriaTarefa.html">Nova tarefa</a></li>
+    <li><a href="http://localhost:8080/ProjUm/Atualiza.html">Atualizar</a></li>
+    <li><a href="http://localhost:8080/ProjUm/Deleta.html">Deletar</a></li>
+  </ul>
+</div>
+
+<h1 class="titulo">Atualizar Tarefa</h1>
+<div class="style_form">
+<form action="Atualiza" method="post">
+
+<input type='number' name='id' placeholder='ID'><br>
+<input type='text' name='nome_tarefa' placeholder='Nome da Tarefa: '><br>
+<input type='date' name='data' placeholder='Data: '><br>
+<input type='text' name='conteudo' placeholder='Conteúdo: ' ><br>
+<input type='text' name='categoria' placeholder='Categoria: ' ><br>
+<input type='text' name='nome_usuario' placeholder='Nome de Usuário: '><br>
+<input type='submit' value='Submit'>
+</form>
+</div>
+</body>
+</html>
