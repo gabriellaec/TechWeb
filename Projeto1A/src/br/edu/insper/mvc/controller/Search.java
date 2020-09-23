@@ -33,8 +33,8 @@ public class Search extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/lista.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**
@@ -61,7 +61,7 @@ public class Search extends HttpServlet {
 				
 				List<Tarefas> tarefas = dao.searchListaTarefas(name, nome_tarefa);
 				request.setAttribute("tarefas", tarefas);
-				RequestDispatcher dispatcher = request.getRequestDispatcher("lista.jsp");
+				RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/lista.jsp");
 				dispatcher.forward(request, response);
 
 				dao.close();

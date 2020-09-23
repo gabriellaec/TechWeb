@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/index.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -66,7 +66,7 @@ public class Login extends HttpServlet {
 			else
 			{
 			   out.println("Usuário ou senha incorretos");
-			   RequestDispatcher rs = request.getRequestDispatcher("index.html");
+			   RequestDispatcher rs = request.getRequestDispatcher("WEB-INF/view/index.jsp");
 			   rs.include(request, response);
 			}
 		} catch (SQLException | ServletException | IOException e) {

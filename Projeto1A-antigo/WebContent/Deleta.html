@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body class="tudo">
+
+<div class="menu">
+<ul>
+    <li><a class="active" href="http://localhost:8080/Projeto1A/ListaTarefa">Minhas Tarefas</a></li>
+    <li><a href="http://localhost:8080/Projeto1A/CriaTarefa.html">Nova tarefa</a></li>
+    <li><a href="http://localhost:8080/Projeto1A/Atualiza.html">Atualizar</a></li>
+    <li><a href="http://localhost:8080/Projeto1A/Deleta.html">Deletar</a></li>
+<div class="menu_right">
+    <li><a class="logout" href="http://localhost:8080/Projeto1A/index.jsp">Logout</a></li>
+ </div>   
+  </ul>
+</div>
+    <h1 class="titulo">Deletar Tarefa</h1>
+    <div class="style_form">
+
+<form action="Remove" method='post'>
+<h4>Remover tarefa com ID: </h4><input type='number' name='id' placeholder='ID '><br>
+<input type='submit' value='Submit'>
+</form>
+</div>
+</body>
+</html>

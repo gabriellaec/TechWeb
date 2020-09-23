@@ -38,7 +38,7 @@ public class Atualiza extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Atualiza.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/Atualiza.jsp");
 		dispatcher.forward(request, response);
 		 
 	}

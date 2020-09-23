@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,8 @@ public class Cria extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/novoCadastro.jsp");
+		dispatcher.forward(request, response);
 	}
 
  	/**
@@ -47,7 +49,7 @@ public class Cria extends HttpServlet {
 			 pessoa.setSenha(request.getParameter("senha"));
 			 dao.adiciona(pessoa);
 			 
-			 response.sendRedirect("index.jsp");
+			 response.sendRedirect("Login");
 
 			 dao.close();
 		} catch (ClassNotFoundException e) {

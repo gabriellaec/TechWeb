@@ -33,7 +33,7 @@ public class Filter extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Atualiza.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/criaTarefa.jsp");
 		dispatcher.forward(request, response);
 	}
 
@@ -55,7 +55,7 @@ public class Filter extends HttpServlet {
 			
 			List<Tarefas> tarefas = dao.filterTarefas(categoria,name);
 			request.setAttribute("tarefas", tarefas);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("lista.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/view/lista.jsp");
 			dispatcher.forward(request, response);
 
 			dao.close();
